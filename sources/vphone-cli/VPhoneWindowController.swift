@@ -36,7 +36,7 @@ class VPhoneWindowController: NSObject, NSToolbarDelegate {
 
         window.isReleasedWhenClosed = false
         window.contentAspectRatio = windowSize
-        window.title = "VPHONE-"
+        window.title = "VPHONE ⏳"
         window.subtitle = ecid ?? ""
         window.contentView = vmView
         window.center()
@@ -62,7 +62,7 @@ class VPhoneWindowController: NSObject, NSToolbarDelegate {
             [weak self, weak window] _ in
             Task { @MainActor in
                 guard let self, let window, let control = self.control else { return }
-                window.title = control.isConnected ? "VPHONE+" : "VPHONE-"
+                window.title = control.isConnected ? "VPHONE 🔗" : "VPHONE ⛓️‍💥"
             }
         }
     }
